@@ -42,7 +42,7 @@
 #define ARCH_UltraSPARC         0
 
 /* system */
-#define SYS_WINDOWS             1
+#define SYS_WINDOWS             !!(_MSC_VER)
 #define SYS_LINUX               0
 #define SYS_MACOSX              0
 #define SYS_BEOS                0
@@ -63,10 +63,10 @@
 /* thread */
 #define HAVE_THREAD             1
 #define HAVE_WIN32THREAD        1
-#define HAVE_PTHREAD            0
+#define HAVE_PTHREAD            1
 #define HAVE_BEOSTHREAD         0
 #define HAVE_POSIXTHREAD        0
-#define PTW32_STATIC_LIB        0
+#define PTW32_STATIC_LIB        1
 
 /* interlace support */
 #define HAVE_INTERLACED         1

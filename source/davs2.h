@@ -61,8 +61,10 @@ extern "C" {    // only need to export C interface if used by C++ source code
 #else
 #  ifdef __GNUC__                     /* for Linux   */
 #    define DAVS2_API
-#  else                               /* for windows */
+#  elif defined(DAVS2_EXPORTS)                              /* for windows */
 #    define DAVS2_API __declspec(dllimport)
+#  else
+#    define DAVS2_API
 #  endif
 #endif
 
